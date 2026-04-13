@@ -212,8 +212,8 @@ else:
     st.write("You are logged in")
     st.write(st.user)
 
-    if st.button("Logout"):
-        st.logout()
+if st.button("Logout"):
+   st.logout()
 
 #else:
     # Safely get user info
@@ -234,7 +234,7 @@ with tabs[0]:
     card_open()
    if not st.user.is_logged_in:
         st.write("Status: **Not signed in**")
-        if st.button("Log in with Google", type="primary"):
+   if st.button("Log in with Google", type="primary"):
             st.login()
         show_oidc_setup_check()
     else:
