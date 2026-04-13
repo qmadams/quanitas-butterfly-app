@@ -235,6 +235,7 @@ with tabs[0]:
     #    st.warning("Please log in first (use the **Login** tab).")
     #    card_close()
     #    st.stop()
+    st.write("App loaded successfully")
 
     display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
     email = safe_user_field("email")
