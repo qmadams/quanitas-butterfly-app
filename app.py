@@ -231,22 +231,22 @@ with tabs[0]:
     st.write("Sign in with Google to capture your **name** and **email address** for personalization.")
     card_close()
 
-   # card_open()
-   # if not st.user.is_logged_in:
-   #     st.write("Status: **Not signed in**")
-   #     if st.button("Log in with Google", type="primary"):
-   #         st.login()
-   #     show_oidc_setup_check()
-   # else:
-   #     display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
-   #     email = safe_user_field("email")
+   card_open()
+   if not st.user.is_logged_in:
+        st.write("Status: **Not signed in**")
+        if st.button("Log in with Google", type="primary"):
+            st.login()
+        show_oidc_setup_check()
+    else:
+        display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
+        email = safe_user_field("email")
 
-    #    st.write("Status: **Signed in** ✅")
-    #    st.write({"name": display_name, "email": email})
+        st.write("Status: **Signed in** ✅")
+        st.write({"name": display_name, "email": email})
 
-   #     if st.button("Log out", type="secondary"):
-   #         st.logout()
-  #  card_close()
+       if st.button("Log out", type="secondary"):
+           st.logout()
+    card_close()
 
 # ----------------------------- TAB: BUTTERFLY PREDICTION -----------------------
 #with tabs[1]:
