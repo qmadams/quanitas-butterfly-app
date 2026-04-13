@@ -240,7 +240,7 @@ with tabs[1]:
     email = safe_user_field("email")
 
     HERO_URL = (
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnnHghQB1F5zUkihyYuAnSNE-EBsl09wwGqpCvabWy3XvE3IIo8yDHRUY0kuEZXJs9wuAygCUc4YO2lW57iWedTSoz-1BulXUAqjGf1EXjcpcnG23ZYlE0yLoFdM&s&ec=121630528"
+        "https://images.openai.com/static-rsc-4/cYNL9xHXkJlPNgP-rUARhrg9KiF78xi0AxORzeoZeuETzr7bN4CAj0F5680rXlGPSnRq6Etm4jtNCnujedXVJb5aPNuBTfuvhtEdwe_viSSgpbR4FKsutVnImSXuKZ9rxwnzh_qqrGhBEsJqBK-Z7JXrudbZkjVcrsxH6GuF5FNMU1MK9_Wmow54halK-hla?purpose=fullsize"
     )
     HERO_DESC = "Adonis Blue Butterfly (decorative background for the classifier)."
 
