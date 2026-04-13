@@ -231,7 +231,7 @@ with tabs[0]:
     st.write("Sign in with Google to capture your **name** and **email address** for personalization.")
     card_close()
 
-   card_open()
+    card_open()
    if not st.user.is_logged_in:
         st.write("Status: **Not signed in**")
         if st.button("Log in with Google", type="primary"):
