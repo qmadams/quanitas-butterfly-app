@@ -229,12 +229,12 @@ with tabs[0]:
     card_close()
 
 # ----------------------------- TAB: BUTTERFLY PREDICTION -----------------------
-with tabs[1]:
-    if not st.user.is_logged_in:
-        card_open()
-        st.warning("Please log in first (use the **Login** tab).")
-        card_close()
-        st.stop()
+#with tabs[1]:
+    #if not st.user.is_logged_in:
+    #    card_open()
+    #    st.warning("Please log in first (use the **Login** tab).")
+    #    card_close()
+    #    st.stop()
 
     display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
     email = safe_user_field("email")
