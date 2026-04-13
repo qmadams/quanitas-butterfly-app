@@ -13,7 +13,7 @@ import streamlit as st
 # Change ONLY if your endpoint changes
 ENDPOINT_URL = "https://askai.aiclub.world/f6c44628-dab2-418f-8840-2f646738cdd8"
 
-st.set_page_config(page_title="Butterfly Classifier (OIDC)", layout="centered")
+st.set_page_config(page_title="Quanita's Butterfly Classifier (OIDC)", layout="centered")
 
 # ----------------------------- ACCESSIBILITY CONTROLS --------------------------
 with st.sidebar:
@@ -205,26 +205,6 @@ st.caption("A responsive Streamlit example for mobile, tablet, laptop, and deskt
 tabs = st.tabs(["Login", "Butterfly Prediction"])
 
 # ----------------------------- TAB: LOGIN -------------------------------------
-if not st.user.is_logged_in:
-    if st.button("Login with Google"):
-        st.login()
-else:
-    st.write("You are logged in")
-    st.write(st.user)
-
-if st.button("Logout"):
-   st.logout()
-
-else:
-    # Safely get user info
-    user_name = getattr(st.user, "name", "User")
-    user_email = getattr(st.user, "email", "")
-
-    st.success(f"Welcome, {user_name}!")
-    st.write(f"Email: {user_email}")
-
-    if st.button("Log out"):
-        st.logout()
 with tabs[0]:
     card_open()
     st.markdown("## Login")
@@ -232,11 +212,11 @@ with tabs[0]:
     card_close()
 
     card_open()
-if not st.user.is_logged_in:
+    if not st.user.is_logged_in:
         st.write("Status: **Not signed in**")
-if st.button("Log in with Google", type="primary"):
+        if st.button("Log in with Google", type="primary"):
             st.login()
-show_oidc_setup_check()
+        show_oidc_setup_check()
     else:
         display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
         email = safe_user_field("email")
@@ -244,18 +224,17 @@ show_oidc_setup_check()
         st.write("Status: **Signed in** ✅")
         st.write({"name": display_name, "email": email})
 
-       if st.button("Log out", type="secondary"):
-           st.logout()
+        if st.button("Log out", type="secondary"):
+            st.logout()
     card_close()
 
 # ----------------------------- TAB: BUTTERFLY PREDICTION -----------------------
-#with tabs[1]:
-    #if not st.user.is_logged_in:
-    #    card_open()
-    #    st.warning("Please log in first (use the **Login** tab).")
-    #    card_close()
-    #    st.stop()
-    st.write("App loaded successfully")
+with tabs[1]:
+    if not st.user.is_logged_in:
+        card_open()
+        st.warning("Please log in first (use the **Login** tab).")
+        card_close()
+        st.stop()
 
     display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
     email = safe_user_field("email")
