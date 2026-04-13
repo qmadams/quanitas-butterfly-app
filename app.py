@@ -232,12 +232,12 @@ with tabs[0]:
     card_close()
 
     card_open()
-   if not st.user.is_logged_in:
+if not st.user.is_logged_in:
         st.write("Status: **Not signed in**")
-   if st.button("Log in with Google", type="primary"):
+if st.button("Log in with Google", type="primary"):
             st.login()
         show_oidc_setup_check()
-    else:
+else:
         display_name = safe_user_field("name", "full_name", "display_name") or "Signed-in user"
         email = safe_user_field("email")
 
