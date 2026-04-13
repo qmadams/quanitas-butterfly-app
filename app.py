@@ -205,6 +205,23 @@ st.caption("A responsive Streamlit example for mobile, tablet, laptop, and deskt
 tabs = st.tabs(["Login", "Butterfly Prediction"])
 
 # ----------------------------- TAB: LOGIN -------------------------------------
+# --- AUTH FLOW ---
+if not st.user.is_logged_in:
+    st.write("Status: Not signed in")
+
+    if st.button("Log in with Google", type="primary"):
+        st.login()
+
+else:
+    # Safely get user info
+    user_name = getattr(st.user, "name", "User")
+    user_email = getattr(st.user, "email", "")
+
+    st.success(f"Welcome, {user_name}!")
+    st.write(f"Email: {user_email}")
+
+    if st.button("Log out"):
+        st.logout()
 with tabs[0]:
     card_open()
     st.markdown("## Login")
