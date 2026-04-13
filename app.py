@@ -240,9 +240,9 @@ with tabs[1]:
     email = safe_user_field("email")
 
     HERO_URL = (
-        "https://images.openai.com/static-rsc-4/xQTOh2NlpNhZiwwFhNzi3IXPdh-xvr0ag5xH3F_pXwLdPII55f_rJC3lO8hZfMYIP0bqxw_qHmo3934YDBGqSxfUKM2pJN4wq8OLw5T8z84SapnnTmj4EG86V6_67i0LRunsael7V_g9_4EkH76tHbdtq2oTL9pm7X5-p7QYluAMdamDsBulSntl3a8x27eE?purpose=fullsize"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnnHghQB1F5zUkihyYuAnSNE-EBsl09wwGqpCvabWy3XvE3IIo8yDHRUY0kuEZXJs9wuAygCUc4YO2lW57iWedTSoz-1BulXUAqjGf1EXjcpcnG23ZYlE0yLoFdM&s&ec=121630528"
     )
-    HERO_DESC = "Monarch butterfly on a flower (decorative background for the classifier)."
+    HERO_DESC = "Adonis Blue Butterfly (decorative background for the classifier)."
 
     card_open()
     st.markdown(f"## Butterfly Classifier")
