@@ -215,7 +215,7 @@ else:
     if st.button("Logout"):
         st.logout()
 
-else:
+#else:
     # Safely get user info
     user_name = getattr(st.user, "name", "User")
     user_email = getattr(st.user, "email", "")
