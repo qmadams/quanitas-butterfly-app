@@ -240,7 +240,7 @@ with tabs[1]:
     email = safe_user_field("email")
 
     HERO_URL = (
-        "https://images.unsplash.com/photo-1623615412998-c63b6d5fe9be?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0"
+        "https://images.openai.com/static-rsc-4/xQTOh2NlpNhZiwwFhNzi3IXPdh-xvr0ag5xH3F_pXwLdPII55f_rJC3lO8hZfMYIP0bqxw_qHmo3934YDBGqSxfUKM2pJN4wq8OLw5T8z84SapnnTmj4EG86V6_67i0LRunsael7V_g9_4EkH76tHbdtq2oTL9pm7X5-p7QYluAMdamDsBulSntl3a8x27eE?purpose=fullsize"
     )
     HERO_DESC = "Monarch butterfly on a flower (decorative background for the classifier)."
 
